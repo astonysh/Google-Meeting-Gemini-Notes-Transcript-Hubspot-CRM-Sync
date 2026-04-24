@@ -1,0 +1,29 @@
+{
+  "name": "google-meet-gemini-hubspot-sync",
+  "version": "1.0.0",
+  "description": "Sync Google Meet Gemini meeting notes and transcripts to HubSpot CRM meetings",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "sync": "node -e \"require('./index').syncMeetings().then(()=>process.exit(0)).catch(e=>{console.error(e);process.exit(1)})\"",
+    "get-token": "node scripts/get-token.js"
+  },
+  "keywords": [
+    "google-meet",
+    "gemini",
+    "hubspot",
+    "crm",
+    "meeting-notes",
+    "automation"
+  ],
+  "author": "",
+  "license": "MIT",
+  "type": "commonjs",
+  "dependencies": {
+    "axios": "^1.14.0",
+    "better-sqlite3": "^11.10.0",
+    "dotenv": "^16.6.1",
+    "googleapis": "^144.0.0",
+    "node-cron": "^3.0.3"
+  }
+}
